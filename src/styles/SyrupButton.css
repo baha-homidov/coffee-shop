@@ -1,0 +1,44 @@
+.syrup-button {
+  font-size: 14px;
+  border: 1px solid red;
+  border-radius: 15px;
+  background-color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.syrup-button .name {
+  font-size: 16px;
+  line-height: 46px;
+}
+
+.syrup-button .control-container {
+  display: flex;
+
+width: 35%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.syrup-button .control-container button {
+background-color: #F3F3F3;
+border: none;
+outline: none;
+  border-radius: 5px;
+  height: 36px;
+  width: 36px;
+
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 33px;
+  vertical-align: middle;
+}
+
+.syrup-button .control-container button.plus {
+  background-color: #F5D009;
+}
