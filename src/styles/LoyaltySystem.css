@@ -1,0 +1,69 @@
+.loyalty-system {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px 24px 12px;
+}
+
+.loyalty-system .back-button {
+  margin-top: 16px;
+
+  align-self: center;
+}
+
+.loyalty-system .main-container {
+  flex-grow: 1;
+}
+
+.loyalty-system .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.loyalty-system .button-container .yellow-button-wrapper button,
+.loyalty-system .button-container .grey-button-wrapper button {
+  width: 100%;
+}
+
+.loyalty-system .button-container .yellow-button-wrapper button {
+  background-color: #f5d009;
+}
+
+.loyalty-system .button-container .grey-button-wrapper button {
+  background-color: #f3f3f3;
+  border: none;
+  outline: none;
+}
+
+.loyalty-system .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+padding-left: 6px;
+padding-right: 6px;
+
+  
+}
+
+.loyalty-system .main-container img {
+  width: 30%;
+  height: auto;
+}
+
+.loyalty-system .main-container h1.title {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.loyalty-system .main-container .subtitle {
+  font-size: 16px;
+  text-align: center;
+}

@@ -39,6 +39,7 @@ export default function Category({ name, circleColor, triangleLeftMargin }) {
               image: espresso,
               name: "Эспрессо",
               price: "100",
+              id: 1,
             })
           }
           image={espresso}
@@ -51,6 +52,7 @@ export default function Category({ name, circleColor, triangleLeftMargin }) {
               image: doubleEspresso,
               name: "Эспрессо",
               price: "150",
+              id: 2,
             })
           }
           image={doubleEspresso}
@@ -63,6 +65,7 @@ export default function Category({ name, circleColor, triangleLeftMargin }) {
               image: americano,
               name: "Американо",
               price: "120",
+              id: 3,
             })
           }
           image={americano}
@@ -75,6 +78,7 @@ export default function Category({ name, circleColor, triangleLeftMargin }) {
               image: latte,
               name: "Латте",
               price: "150",
+              id: 4,
             })
           }
           image={latte}
@@ -87,6 +91,7 @@ export default function Category({ name, circleColor, triangleLeftMargin }) {
               image: capuccino,
               name: "Капучино",
               price: "150",
+              id: 5,
             })
           }
           image={capuccino}
@@ -99,6 +104,7 @@ export default function Category({ name, circleColor, triangleLeftMargin }) {
               image: machiato,
               name: "Макиато",
               price: "150",
+              id: 6,
             })
           }
           image={machiato}

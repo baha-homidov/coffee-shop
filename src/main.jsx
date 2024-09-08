@@ -7,6 +7,7 @@ import "./index.css";
 import Root from "./routes/root.jsx";
 import ErrorPage from "./routes/error-page.jsx";
 import Menu from "./routes/menu.jsx";
+import LoyaltySystem from "./routes/loyalty-system.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
   {
     path: "/menu",
     element: <Menu />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/loyalty-system",
+    element: <LoyaltySystem />,
     errorElement: <ErrorPage />,
   },
 ]);

@@ -5,7 +5,9 @@ import { useState } from "react";
 import PayButton from "./PayButton";
 import GenericButton from "./GenericButton";
 import SyrupButton from "./SyrupButton";
+import { useNavigate } from "react-router-dom";
 export default function Overlay({ onClose, product }) {
+  const navigate = useNavigate();
   const [activeSize, setActiveSize] = useState("small");
   const [price, setPrice] = useState(product.price);
   const [syrupOverlay, setSyrupOverlay] = useState(false);
@@ -62,7 +64,7 @@ export default function Overlay({ onClose, product }) {
             <PayButton
               price={price}
               onClick={() => {
-                console.log("PAY");
+                navigate(`/loyalty-system?id=${product.id}&price=${price}`);
               }}
             />
           </div>
@@ -125,7 +127,7 @@ export default function Overlay({ onClose, product }) {
           <PayButton
             price={price}
             onClick={() => {
-              console.log("PAY");
+              navigate(`/loyalty-system?id=${product.id}&price=${price}`);
             }}
           />
         </div>

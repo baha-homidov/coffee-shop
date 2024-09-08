@@ -1,0 +1,18 @@
+.back-button {
+  outline: none;
+  width: 33%;
+  height: 68px;
+  background-color: #FAFAFA;
+  border: 1px solid #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.back-button img {
+height: 28px;
+width: auto;
+}
+
