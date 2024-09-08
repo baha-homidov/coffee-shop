@@ -8,6 +8,8 @@ import teaImg from "../assets/teaCategory.webp";
 import sparklingImg from "../assets/sparklingCategory.webp";
 import { useState } from "react";
 import MenuCategoryButton from "../components/MenuCategoryButton";
+import Category from "../components/Category";
+import TeaCategory from "../components/TeaCategory";
 export default function Menu() {
   const [menuState, setMenuState] = useState("coffee");
 
@@ -27,12 +29,42 @@ export default function Menu() {
       </div>
 
       <div className="categoryMenuContainer">
-        <MenuCategoryButton onClick={() => setMenuState("coffee")} active={menuState === "coffee"} name="Кофе" image={coffeeImg} />
-        <MenuCategoryButton onClick={() => setMenuState("tea")} active={menuState === "tea"} name="Чай" image={teaImg} />
-        <MenuCategoryButton onClick={() => setMenuState("milk")} active={menuState === "milk"} name="Молочный коктейл" image={milkShakeImg} />
-        <MenuCategoryButton onClick={() => setMenuState("sparkling")} active={menuState === "sparkling"} name="Морсы и газ. напитки" image={sparklingImg} />
+        <MenuCategoryButton
+          onClick={() => setMenuState("coffee")}
+          active={menuState === "coffee"}
+          name="Кофе"
+          image={coffeeImg}
+        />
+        <div className="line"></div>
+        <MenuCategoryButton
+          onClick={() => setMenuState("tea")}
+          active={menuState === "tea"}
+          name="Чай"
+          image={teaImg}
+        />
+        <div className="line"></div>
 
+        <MenuCategoryButton
+          onClick={() => setMenuState("milk")}
+          active={menuState === "milk"}
+          name="Молочный коктейл"
+          image={milkShakeImg}
+        />
+        <div className="line"></div>
+
+        <MenuCategoryButton
+          onClick={() => setMenuState("sparkling")}
+          active={menuState === "sparkling"}
+          name="Морсы и газ. напитки"
+          image={sparklingImg}
+        />
       </div>
+
+      {menuState === "coffee" && <Category name="Кофе" circleColor="#f0ccb9" triangleLeftMargin="8%" />}
+      {menuState === "tea" && <Category name="Чай" circleColor="#CAEA94"  triangleLeftMargin="32.5%" />}
+      {menuState === "milk" && <Category name="Молочный коктейл" circleColor="#F9ECD2" triangleLeftMargin="57.5%" />}
+      
+      {menuState === "sparkling" && <Category name="Морсы и газ. напитки" circleColor="#FFE664" triangleLeftMargin="82%" />}
     </div>
   );
 }
