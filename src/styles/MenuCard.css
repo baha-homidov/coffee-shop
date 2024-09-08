@@ -1,6 +1,6 @@
 .menu-card {
   border: 1px solid #F0F0F0;
-
+background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;

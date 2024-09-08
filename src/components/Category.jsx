@@ -8,23 +8,110 @@ import machiato from "../assets/drinks/machiato.webp";
 import triangle from "../assets/triangle.svg";
 import coffeeCategoryBackground from "../assets/coffeeCategoryBackground.svg";
 import MenuCard from "./MenuCard";
+import { useState } from "react";
+import Overlay from "./Overlay";
 
-const Category = ({name, circleColor, triangleLeftMargin}) => (
-  <div className="coffee-category" >
-    <div className="triangle" style={{left: triangleLeftMargin}}></div>
-    <div className="header">
-      <h1 className="title">{name}</h1>
-      <div className="circle" style={{ backgroundColor: circleColor }} ></div>
-    </div>
-    <div className="menu-category">
-      <MenuCard image={espresso} name="Эспрессо" price="100" />
-      <MenuCard image={doubleEspresso} name="Эспрессо" price="150" />
-      <MenuCard image={americano} name="Американо" price="120" />
-      <MenuCard image={latte} name="Латте" price="150" />
-      <MenuCard image={capuccino} name="Капучино" price="150" />
-      <MenuCard image={machiato} name="Макиато" price="150" />
-    </div>
-  </div>
-);
+export default function Category({ name, circleColor, triangleLeftMargin }) {
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [currentProduct, setCurrentProduct] = useState({});
 
-export default Category;
+  const handleClick = (product) => {
+    setShowOverlay(true);
+    setCurrentProduct(product);
+  };
+  return (
+    <div className="coffee-category">
+      {showOverlay && (
+        <Overlay
+          product={currentProduct}
+          onClose={() => setShowOverlay(false)}
+        />
+      )}
+      <div className="triangle" style={{ left: triangleLeftMargin }}></div>
+      <div className="header">
+        <h1 className="title">{name}</h1>
+        <div className="circle" style={{ backgroundColor: circleColor }}></div>
+      </div>
+      <div className="menu-category">
+        <MenuCard
+          onclick={() =>
+            handleClick({
+              image: espresso,
+              name: "Эспрессо",
+              price: "100",
+            })
+          }
+          image={espresso}
+          name="Эспрессо"
+          price="100"
+        />
+        <MenuCard
+          onclick={() =>
+            handleClick({
+              image: doubleEspresso,
+              name: "Эспрессо",
+              price: "150",
+            })
+          }
+          image={doubleEspresso}
+          name="Эспрессо"
+          price="150"
+        />
+        <MenuCard
+          onclick={() =>
+            handleClick({
+              image: americano,
+              name: "Американо",
+              price: "120",
+            })
+          }
+          image={americano}
+          name="Американо"
+          price="120"
+        />
+        <MenuCard
+          onclick={() =>
+            handleClick({
+              image: latte,
+              name: "Латте",
+              price: "150",
+            })
+          }
+          image={latte}
+          name="Латте"
+          price="150"
+        />
+        <MenuCard
+          onclick={() =>
+            handleClick({
+              image: capuccino,
+              name: "Капучино",
+              price: "150",
+            })
+          }
+          image={capuccino}
+          name="Капучино"
+          price="150"
+        />
+        <MenuCard
+          onclick={() =>
+            handleClick({
+              image: machiato,
+              name: "Макиато",
+              price: "150",
+            })
+          }
+          image={machiato}
+          name="Макиато"
+          price="150"
+        />
+        {/* ß      
+        <MenuCard image={espresso} name="Эспрессо" price="100" />
+        <MenuCard image={americano} name="Американо" price="120" />
+        <MenuCard image={latte} name="Латте" price="150" />
+        <MenuCard image={capuccino} name="Капучино" price="150" />
+        <MenuCard image={machiato} name="Макиато" price="150" /> */}
+      </div>
+    </div>
+  );
+}

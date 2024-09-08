@@ -15,7 +15,7 @@ font-size: 13px;
 
 
 .menuCategoryButton .menuCategoryButtonImage {
-  z-index: 2;
+  z-index: 1;
 
 width: 90%;
   height: auto;
@@ -28,7 +28,7 @@ width: 90%;
 .menuCategoryButtonCircle {
   position: absolute;
   top: 40px;
-  z-index: 1;
+  z-index: 0;
 
   background-color: rgb(53, 126, 191);
   width: 55%;

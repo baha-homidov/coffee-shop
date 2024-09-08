@@ -1,0 +1,11 @@
+.generic-button {
+  background-color: white;
+  border: 1px solid #f5d009;
+  border-radius: 15px;
+  height: 66px;
+  font-size: 18px;
+  line-height: 66px;
+  vertical-align: middle;
+
+  font-weight: 400;
+}
