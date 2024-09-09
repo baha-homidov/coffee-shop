@@ -8,6 +8,10 @@ import Root from "./routes/root.jsx";
 import ErrorPage from "./routes/error-page.jsx";
 import Menu from "./routes/menu.jsx";
 import LoyaltySystem from "./routes/loyalty-system.jsx";
+import SignUp from "./routes/sign-up.jsx";
+import PhoneNumber from "./routes/phone-number.jsx";
+import PaymentCode from "./routes/payment-code.jsx";
+import Bonus from "./routes/Bonus.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +27,31 @@ const router = createBrowserRouter([
   {
     path: "/loyalty-system",
     element: <LoyaltySystem />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/sign-up",
+    element: <SignUp />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/phone-number-sign-in",
+    element: <PhoneNumber title="Вход" />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/phone-number-sign-up",
+    element: <PhoneNumber title="Регистрация" />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/phone-number-verification",
+    element: <PaymentCode />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/bonus",
+    element: <Bonus />,
     errorElement: <ErrorPage />,
   },
 ]);

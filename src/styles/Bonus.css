@@ -1,0 +1,90 @@
+.bonus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 12px 24px 12px;
+}
+
+.bonus .back-button {
+  align-self: center;
+}
+
+.bonus .main-container {
+  flex-grow: 1;
+}
+
+.bonus .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bonus .button-container .yellow-button-wrapper button,
+.bonus .button-container .grey-button-wrapper button {
+  width: 100%;
+}
+
+.bonus .button-container .yellow-button-wrapper button {
+  background-color: #f5d009;
+}
+
+.bonus .button-container .grey-button-wrapper button {
+  background-color: #f3f3f3;
+  border: none;
+  outline: none;
+}
+
+.bonus .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.bonus .main-container img {
+  width: 30%;
+  height: auto;
+}
+
+.bonus .main-container h1.title {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.bonus .button-switcher {
+  display: flex;
+  position: relative;
+  background-color: #f3f3f3;
+  border-radius: 15px;
+}
+
+.bonus .spend-button,
+.bonus .save-button {
+  border-radius: 15px;
+  height: 66px;
+  font-size: 18px;
+  line-height: 66px;
+  vertical-align: middle;
+  font-weight: 400;
+
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  transition: 0.1s ease-in-out;
+}
+
+.bonus .spend-button.active {
+
+  background-color: #f5d009;
+}

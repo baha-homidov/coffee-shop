@@ -1,0 +1,94 @@
+.payment-code {
+  border: 1px solid red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 12px 24px 12px;
+
+  z-index: 1;
+}
+
+.payment-code .subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+}
+
+.payment-code .back-button {
+  align-self: center;
+}
+
+.payment-code .main-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+}
+.payment-code .phone-number-container {
+  margin-top: -7px;
+
+
+  display: flex;
+  gap: 12px;
+  font-size: 58px;
+  font-weight: 200;
+}
+
+.payment-code .phone-number-container .digit {
+  width: 40px;
+  text-align: center;
+  color: #cecece;
+  transition: 0.2s ease-in-out;
+}
+
+.payment-code .phone-number-container .digit.active {
+  color: black;
+}
+
+.payment-code .numpad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.payment-code .numpad .hide {
+  visibility: hidden;
+  cursor: none;
+  pointer-events: none;
+}
+
+.payment-code .numpad button {
+  height: 75px;
+  width: 75px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #d2d2d2;
+  font-size: 48px;
+  font-weight: 200;
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-code .numpad img.back {
+  height: 20px;
+  width: auto;
+}
+
+.payment-code .numpad button:active {
+  background-color: #f5f5f5;
+}
+
+.payment-code .main-container .generic-button {
+  width: 100%;
+  background-color: #f5d009;
+}

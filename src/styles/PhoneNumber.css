@@ -1,0 +1,106 @@
+.phone-number {
+  border: 1px solid red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 12px 24px 12px;
+
+  z-index: 1;
+}
+
+.phone-number .title {
+  font-size: 32px;
+  line-height: 32px;
+  margin-top: 12px;
+  font-weight: 400;
+}
+
+.phone-number .subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #686868;
+  font-weight: 300;
+}
+
+.phone-number .back-button {
+  align-self: center;
+}
+
+.phone-number .main-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+}
+.phone-number .phone-number-container {
+  margin-top: -7px;
+
+  height: 46px;
+  display: flex;
+  gap: 6px;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.phone-number .phone-number-container .block {
+  display: flex;
+}
+
+.phone-number .phone-number-container .block .digit {
+  width: 20px;
+  text-align: center;
+  color: #CECECE;
+  transition: 0.2s ease-in-out;
+}
+
+
+.phone-number .phone-number-container .block .digit.active {
+  color: black;
+}
+
+.phone-number .numpad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.phone-number .numpad .hide {
+  visibility: hidden;
+  cursor: none;
+  pointer-events: none;
+}
+
+.phone-number .numpad button {
+  height: 75px;
+  width: 75px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #d2d2d2;
+  font-size: 48px;
+  font-weight: 200;
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-number .numpad img.back {
+  height: 20px;
+  width: auto;
+}
+
+.phone-number .numpad button:active {
+  background-color: #f5f5f5;
+}
+
+.phone-number .main-container .generic-button {
+  width: 100%;
+  background-color: #f5d009;
+}

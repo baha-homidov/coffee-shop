@@ -1,0 +1,114 @@
+.sign-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 12px 24px 12px;
+  background-color: #f5d009;
+  z-index: 1;
+}
+
+.sign-up .main-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.sign-up .back-button {
+  align-self: center;
+}
+
+.sign-up .title {
+  text-align: center;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.sign-up .sub-title {
+  font-size: 16px;
+
+  text-align: center;
+}
+
+.sign-up .alredy-signed-up {
+  font-size: 16px;
+}
+
+.sign-up .generic-button,
+.sign-up .black-button-wrapper {
+  width: 100%;
+}
+
+.sign-up .black-button-wrapper .generic-button {
+  background-color: #000000;
+  color: #f5d009;
+}
+
+.background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-canvas .triangle {
+  height: 101%;
+  left: -25%;
+  position: absolute;
+}
+
+.background-canvas .curvy-line {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.background-canvas .coffee-bean-b {
+  width: 28px;
+  height: auto;
+  position: absolute;
+  right: 15%;
+  top: 6%;
+}
+
+.background-canvas .coffee-bean-a {
+  width: 23px;
+  height: auto;
+  position: absolute;
+  left: 2%;
+  top: 18%;
+}
+
+.background-canvas .coffee-bean-c {
+  width: 32px;
+  height: auto;
+  position: absolute;
+  right: -2%;
+  top: 24%;
+}
+
+.background-canvas .coffee-bean-d {
+  width: 25px;
+  height: auto;
+  position: absolute;
+  right: 7%;
+  bottom: 12%;
+}
+
+.background-canvas .coffee-bean-e {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  left: 7%;
+  bottom: 2%;
+}
