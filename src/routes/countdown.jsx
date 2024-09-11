@@ -10,7 +10,7 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 export default function CountDown() {
   const location = useLocation();
   const navigate = useNavigate();
-  const duration = 120; // Set the timer duration dynamically
+  const duration = 20; // Set the timer duration dynamically
 
   // Function to format time in MM:SS
   const formatTime = (remainingTime) => {

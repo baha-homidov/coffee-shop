@@ -67,7 +67,7 @@ export default function PaymentCode({ title }) {
         </div>
         <GenericButton
           onClick={() =>
-            phoneNumber.length === 10 && navigate("/phone-number-verification")
+            phoneNumber.length === 4 && navigate("/account")
           }
           name="Отправить"
           disabled={phoneNumber.length !== 4}

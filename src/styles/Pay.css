@@ -38,3 +38,13 @@
   font-weight: 400;
   text-align: center;
 }
+
+
+.pay .button-container {
+  width: 100%;
+
+}
+
+.pay .button-container button {
+  width: 100%;
+}

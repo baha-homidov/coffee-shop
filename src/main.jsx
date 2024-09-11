@@ -16,6 +16,8 @@ import Pay from "./routes/pay.jsx";
 import Fail from "./routes/fail.jsx";
 import CountDown from "./routes/countdown.jsx";
 import OrderReady from "./routes/order-ready.jsx";
+import OrderFail from "./routes/order-fail.jsx";
+import Account from "./routes/account.jsx";
 
 const router = createBrowserRouter([
   {
@@ -77,6 +79,16 @@ const router = createBrowserRouter([
   {
     path: "/order-ready",
     element: <OrderReady />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/order-fail",
+    element: <OrderFail />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/account",
+    element: <Account />,
     errorElement: <ErrorPage />,
   },
 ]);

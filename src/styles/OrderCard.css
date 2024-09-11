@@ -1,0 +1,80 @@
+.order-card {
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d8d8d8;
+  gap: 6px;
+  justify-content: space-between;
+  padding: 6px 12px 6px 6px;
+}
+
+.order-card img.product-img {
+  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+  width: max(80px, 27%);
+  height: auto;
+}
+
+.order-card .info-container {
+  flex-grow: 2;
+
+  margin-left: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-card .info-container .name,
+.order-card .info-container .price {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.order-card .info-container .size,
+.order-card .info-container .syrup {
+  font-size: 10px;
+  line-height: 10px;
+  color: #b1b1b1;
+}
+
+.order-card .info-container .bonus-container {
+  display: flex;
+  font-size: 10px;
+  gap: 8px;
+  align-items: center;
+}
+
+.order-card .info-container .bonus-container img {
+  width: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: -2px;
+}
+
+.order-card .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.order-card .button-container button {
+  width: 100%;
+  font-size: 10px;
+  line-height: 32px;
+  vertical-align: middle;
+  border-radius: 10px;
+
+  padding: 0px 8px 0px 8px;
+  height: 32px;
+}
+
+.order-card .yellow-button-wrapper button {
+  background-color: #f5d009;
+}
+
+.order-card .white-button-wrapper button {
+  background-color: white;
+  border: 1px solid #d3d3d3;
+}

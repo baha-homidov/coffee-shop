@@ -1,0 +1,60 @@
+.order-fail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 12px 24px 12px;
+  background-color: #f58809;
+}
+
+.order-fail .back-button {
+  align-self: center;
+}
+
+.order-fail .main-container {
+  flex-grow: 1;
+}
+
+.order-fail .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-fail .grey-button-wrapper button {
+  width: 100%;
+}
+
+.order-fail .grey-button-wrapper button {
+  background-color: white;
+  color: #d07003;
+  border: none;
+  outline: none;
+  margin-bottom: 50px;
+}
+
+.order-fail .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.order-fail .main-container img {
+  width: 30%;
+  height: auto;
+}
+
+.order-fail .main-container h1.title {
+  font-size: 30px;
+  font-weight: 300;
+  max-width: 84%;
+  text-align: center;
+  color: white;
+}

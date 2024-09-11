@@ -102,7 +102,7 @@
   background-color: #f5d00b;
 }
 
-.button-container {
+.overlay .button-container {
   display: flex;
   flex-direction: column;
   gap: 6px;
