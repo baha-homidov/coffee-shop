@@ -15,6 +15,7 @@ import Bonus from "./routes/Bonus.jsx";
 import Pay from "./routes/pay.jsx";
 import Fail from "./routes/fail.jsx";
 import CountDown from "./routes/countdown.jsx";
+import OrderReady from "./routes/order-ready.jsx";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,11 @@ const router = createBrowserRouter([
   {
     path: "/countdown",
     element: <CountDown />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/order-ready",
+    element: <OrderReady />,
     errorElement: <ErrorPage />,
   },
 ]);
