@@ -9,8 +9,17 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding: 36px 12px 24px 12px;
+  padding: 36px 12px 12px 12px;
   background-color: #f5d009;
+}
+
+.order-ready .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ gap: 20px;
+  justify-content: center;
+ flex-grow: 1;
 }
 
 .order-ready img {
@@ -26,4 +35,8 @@
 .order-ready .subtitle {
   font-size: 18px;
   text-align: center;
+}
+
+.order-ready button {
+width: 100%;
 }

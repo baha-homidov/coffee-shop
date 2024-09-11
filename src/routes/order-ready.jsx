@@ -13,11 +13,17 @@ export default function OrderReady() {
 
   return (
     <div className="order-ready">
-      <img className="rubleIcon" src={rubleIcon} alt="rubleIcon" />
-      <div className="text-container">
-        <h1 className="title">Напиток готов!</h1>
-        <div className="subtitle">вы можете забрать его</div>
+      <div className="main-container">
+        <img className="rubleIcon" src={rubleIcon} alt="rubleIcon" />
+        <div className="text-container">
+          <h1 className="title">Напиток готов!</h1>
+          <div className="subtitle">вы можете забрать его</div>
+        </div>
       </div>
+      <GenericButton
+        onClick={() => navigate("/menu")}
+        name="Вернуться на главную"
+      />
     </div>
   );
 }
