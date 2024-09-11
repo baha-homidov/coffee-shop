@@ -1,0 +1,66 @@
+.fail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 12px 24px 12px;
+  background-color: #f03b3b;
+}
+
+.fail .back-button {
+  align-self: center;
+}
+
+.fail .main-container {
+  flex-grow: 1;
+}
+
+.fail .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fail .button-container .transparent-button-wrapper button,
+.fail .button-container .try-more-button-container button {
+  width: 100%;
+}
+
+.fail .button-container .try-more-button-container button {
+  color: #f03b3b;
+}
+
+.fail .button-container .transparent-button-wrapper button {
+  background-color: #f03b3b;
+  color: white;
+}
+
+.fail .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.fail .main-container img {
+  width: 110px;
+  height: auto;
+}
+
+.fail .main-container h1.title {
+  font-size: 26px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+.fail .main-container .subtitle {
+  font-size: 16px;
+  text-align: center;
+}

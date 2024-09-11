@@ -1,0 +1,77 @@
+.countdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 12px 24px 12px;
+
+  overflow: hidden;
+}
+
+.timer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.countdown .timer-content .time {
+  display: flex; /* Use flex to align the time digits */
+  justify-content: center;
+  align-items: center;
+  line-height: 75px;
+  font-size: 85px;
+  font-weight: 300;
+}
+
+.time-container {
+  display: flex;
+  align-items: center;
+}
+
+.digit {
+  display: inline-block;
+  width: 50px; /* Fixed width for digits and colon */
+
+  text-align: center;
+}
+
+
+
+.countdown .timer-content .timer-label {
+  color: #a7a7a7;
+  font-size: 14px;
+}
+
+.custom-timer .timer-path {
+  stroke-linecap: round; /* Make the stroke ends circular */
+}
+
+.countdown .timer-wrapper {
+  position: relative;
+  border-radius: 50%;
+}
+
+.countdown .dot-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+.timer-wrapper .dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #f5d009;
+  top: -6px;
+  border-radius: 50%;
+  left: calc(50% - 7px);
+}

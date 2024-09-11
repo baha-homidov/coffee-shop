@@ -1,4 +1,4 @@
-.loyalty-system {
+.pay {
   position: absolute;
   top: 0;
   left: 0;
@@ -7,40 +7,18 @@
   display: flex;
   flex-direction: column;
   padding: 36px 12px 24px 12px;
-}
-
-.loyalty-system .back-button {
-
-
-  align-self: center;
-}
-
-.loyalty-system .main-container {
-  flex-grow: 1;
-}
-
-.loyalty-system .button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.loyalty-system .button-container .yellow-button-wrapper button,
-.loyalty-system .button-container .grey-button-wrapper button {
-  width: 100%;
-}
-
-.loyalty-system .button-container .yellow-button-wrapper button {
   background-color: #f5d009;
 }
 
-.loyalty-system .button-container .grey-button-wrapper button {
-  background-color: #f3f3f3;
-  border: none;
-  outline: none;
+.pay .back-button {
+  align-self: center;
 }
 
-.loyalty-system .main-container {
+.pay .main-container {
+  flex-grow: 1;
+}
+
+.pay .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,18 +28,13 @@
   padding-right: 6px;
 }
 
-.loyalty-system .main-container img {
-  width: 30%;
+.pay .main-container img {
+  width: 180px;
   height: auto;
 }
 
-.loyalty-system .main-container h1.title {
+.pay .main-container h1.title {
   font-size: 30px;
   font-weight: 400;
-  text-align: center;
-}
-
-.loyalty-system .main-container .subtitle {
-  font-size: 16px;
   text-align: center;
 }

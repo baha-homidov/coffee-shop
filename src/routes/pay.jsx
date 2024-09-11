@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/Pay.css";
-import rubleIcon from "../assets/icons/rubleIcon.svg";
+import bankCard from "../assets/bankCard.svg";
 
 import BackButton from "../components/BackButton";
 import GenericButton from "../components/GenericButton";
@@ -23,23 +23,43 @@ export default function Pay() {
     }
   }, [id, price, navigate]);
 
+  // Implement a function to navigate to page /fail when the button 'f' is pressed on the keyboard
+  const handleKeyPress = (event) => {
+    if (event.key === "f") {
+      navigate("/fail");
+    }
+  };
+
+  const handlePay = () => {
+    navigate("/countdown");
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [navigate]);
+
   return (
     <div className="pay">
       <div className="main-container">
-        <img className="rubleIcon" src={rubleIcon} alt="rubleIcon" />
-        <h1 className="title">Система лояльности</h1>
-        <div className="subtitle">
-          Вы можете зарегестрироваться и получать бонусы за каждый напиток. 1
-          бонус = 1 рубль
-        </div>
+        <img
+          className="backCard"
+          onClick={handlePay}
+          src={bankCard}
+          alt="Bank Card"
+        />
+        <h1 className="title">Приложите карту к терминалу</h1>
       </div>
       <div className="button-container">
         <GenericButton
           onClick={() => {
             console.log("SIGN UP");
-            navigate("/sign-up");
+            navigate(-1);
           }}
-          name="Зарегестрироваться"
+          name="Отмена"
         />
       </div>
     </div>

@@ -13,7 +13,8 @@ import PhoneNumber from "./routes/phone-number.jsx";
 import PaymentCode from "./routes/payment-code.jsx";
 import Bonus from "./routes/Bonus.jsx";
 import Pay from "./routes/pay.jsx";
-
+import Fail from "./routes/fail.jsx";
+import CountDown from "./routes/countdown.jsx";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,16 @@ const router = createBrowserRouter([
   {
     path: "/pay",
     element: <Pay />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/fail",
+    element: <Fail />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/countdown",
+    element: <CountDown />,
     errorElement: <ErrorPage />,
   },
 ]);
