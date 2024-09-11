@@ -44,6 +44,9 @@ export default function CountDown() {
           colors={["#F5D009"]}
           strokeWidth={2}
           size={300}
+          onComplete={() => {
+            () => {};
+          }}
         >
           {({ remainingTime, elapsedTime }) => (
             <>
