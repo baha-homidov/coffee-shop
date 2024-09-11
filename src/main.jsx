@@ -12,6 +12,9 @@ import SignUp from "./routes/sign-up.jsx";
 import PhoneNumber from "./routes/phone-number.jsx";
 import PaymentCode from "./routes/payment-code.jsx";
 import Bonus from "./routes/Bonus.jsx";
+import Pay from "./routes/pay.jsx";
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,6 +55,11 @@ const router = createBrowserRouter([
   {
     path: "/bonus",
     element: <Bonus />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/pay",
+    element: <Pay />,
     errorElement: <ErrorPage />,
   },
 ]);

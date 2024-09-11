@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../styles/Bonus.css";
+import "../styles/Pay.css";
 import rubleIcon from "../assets/icons/rubleIcon.svg";
 
 import BackButton from "../components/BackButton";
 import GenericButton from "../components/GenericButton";
-import PayButton from "../components/PayButton";
-import { useState } from "react";
-export default function Bonus() {
+
+export default function Pay() {
   // Get the current location object
   const location = useLocation();
   const navigate = useNavigate();
-  const [spendBonus, setSpendBonus] = useState(false);
+
   // Use URLSearchParams to parse the query parameters
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get("id"); // Get the 'id' parameter
@@ -25,32 +24,22 @@ export default function Bonus() {
   }, [id, price, navigate]);
 
   return (
-    <div className="bonus">
-      <BackButton />
+    <div className="pay">
       <div className="main-container">
         <img className="rubleIcon" src={rubleIcon} alt="rubleIcon" />
-        <h1 className="title">У вас имеется 120 бонусов</h1>
+        <h1 className="title">Система лояльности</h1>
+        <div className="subtitle">
+          Вы можете зарегестрироваться и получать бонусы за каждый напиток. 1
+          бонус = 1 рубль
+        </div>
       </div>
       <div className="button-container">
-        <div className="button-switcher">
-          <div
-            onClick={() => setSpendBonus(true)}
-            className={"spend-button" + (spendBonus ? " active" : "")}
-          >
-            Списать 120
-          </div>
-          <div
-            className={"spend-button" + (!spendBonus ? " active" : "")}
-            onClick={() => setSpendBonus(false)}
-          >
-            Накопить 32
-          </div>
-        </div>
-        <PayButton
+        <GenericButton
           onClick={() => {
-            navigate("/pay?id=" + id + "&price=" + price);
+            console.log("SIGN UP");
+            navigate("/sign-up");
           }}
-          price={price}
+          name="Зарегестрироваться"
         />
       </div>
     </div>
