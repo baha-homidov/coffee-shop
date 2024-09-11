@@ -14,7 +14,6 @@ import Overlay from "./Overlay";
 export default function Category({ name, circleColor, triangleLeftMargin }) {
   const [showOverlay, setShowOverlay] = useState(false);
   const [currentProduct, setCurrentProduct] = useState({});
-
   const handleClick = (product) => {
     setShowOverlay(true);
     setCurrentProduct(product);
